@@ -291,7 +291,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="checkin">
+   <!-- <widget class="QWidget" name="checkin">
     <attribute name="title">
      <string>checkin</string>
     </attribute>
@@ -607,7 +607,7 @@
       <string>sunday_22_23_count</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkin_25">
+    <widget class="QCheckBox" name="checkin_25"> 
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -620,7 +620,7 @@
       <string>sunday_23_0_count</string>
      </property>
     </widget>
-   </widget>
+   </widget>-->
    <widget class="QWidget" name="review">
     <attribute name="title">
      <string>review</string>
