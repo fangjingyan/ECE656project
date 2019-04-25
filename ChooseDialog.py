@@ -15,63 +15,59 @@ class ChooseDialog(QDialog):
         self.selected_tables = []
 
     def set_selected_attr(self):
-        check_flag = False
+        select_table_flag = False
+        clean_flag = ""
+        if self.child.yes_clean.isChecked():
+            self.clean_data()
+            clean_flag = "_clean"
 
         for checkbox in self.child.business_checkboxes:
             if checkbox.isChecked():
-                check_flag = True
-                self.selected_attributes.append("business."+checkbox.text())
-        if check_flag:
-            check_flag = False
-            self.selected_tables.append("business")
+                select_table_flag = True
+                self.selected_attributes.append("business"+clean_flag+"."+checkbox.text())
+        if select_table_flag:
+            select_table_flag = False
+            self.selected_tables.append("business"+clean_flag)
 
         for checkbox in self.child.business_categories_checkboxes:
             if checkbox.isChecked():
-                check_flag = True
-                self.selected_attributes.append("business_categories."+checkbox.text())
-        if check_flag:
-            check_flag = False
-            self.selected_tables.append("business_categories")
+                select_table_flag = True
+                self.selected_attributes.append("business_categories"+clean_flag+"."+checkbox.text())
+        if select_table_flag:
+            select_table_flag = False
+            self.selected_tables.append("business_categories"+clean_flag)
 
         for checkbox in self.child.review_checkboxes:
             if checkbox.isChecked():
-                check_flag = True
-                self.selected_attributes.append("review."+checkbox.text())
-        if check_flag:
-            check_flag = False
-            self.selected_tables.append("review")
+                select_table_flag = True
+                self.selected_attributes.append("review"+clean_flag+"."+checkbox.text())
+        if select_table_flag:
+            select_table_flag = False
+            self.selected_tables.append("review"+clean_flag)
 
         for checkbox in self.child.tip_checkboxes:
             if checkbox.isChecked():
-                check_flag = True
-                self.selected_attributes.append("tip."+checkbox.text())
-        if check_flag:
-            check_flag = False
-            self.selected_tables.append("tip")
+                select_table_flag = True
+                self.selected_attributes.append("tip"+clean_flag+"."+checkbox.text())
+        if select_table_flag:
+            select_table_flag = False
+            self.selected_tables.append("tip"+clean_flag)
 
         for checkbox in self.child.user_checkboxes:
             if checkbox.isChecked():
-                check_flag = True
-                self.selected_attributes.append("user."+checkbox.text())
-        if check_flag:
-            check_flag = False
-            self.selected_tables.append("user")
+                select_table_flag = True
+                self.selected_attributes.append("user"+clean_flag+"."+checkbox.text())
+        if select_table_flag:
+            select_table_flag = False
+            self.selected_tables.append("user"+clean_flag)
 
         for checkbox in self.child.user_elite_checkboxes:
             if checkbox.isChecked():
-                check_flag = True
-                self.selected_attributes.append("user_elite."+checkbox.text())
-        if check_flag:
-            check_flag = False
-            self.selected_tables.append("user_elite")
-
-        for checkbox in self.child.user_friends_checkboxes:
-            if checkbox.isChecked():
-                check_flag = True
-                self.selected_attributes.append("user_friends."+checkbox.text())
-        if check_flag:
-            check_flag = False
-            self.selected_tables.append("user_friends")
+                select_table_flag = True
+                self.selected_attributes.append("user_elite"+clean_flag+"."+checkbox.text())
+        if select_table_flag:
+            select_table_flag = False
+            self.selected_tables.append("user_elite"+clean_flag)
 
         print(self.selected_attributes)
         print(self.selected_tables)
@@ -81,8 +77,7 @@ class ChooseDialog(QDialog):
         self.selected_attributes =[]
 
     def cal_tree(self):
-        if self.child.yes_clean.isChecked():
-            self.clean_data()
+        print("cal_tree")
 
     def clean_data(self):
         print("clean data")

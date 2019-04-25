@@ -1,46 +1,54 @@
-from mainwindow import *
-from choosedialog import *
-from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog
 import sys
 
+import pymysql
 
-class parentWindow(QMainWindow):
-    def __init__(self):
-        QMainWindow.__init__(self)
-        self.main_ui = Ui_MainWindow()
-        self.main_ui.setupUi(self)
-        # 想在这里定按钮中的功能
-        # self.main_ui.nextbtn.clicked.connect(self.nextChoose())
-
-    # def nextChoose(self):
-        # self.hide()
-        # self.dialog = Ui_Dialog()
-        # self.dialog.show()
+from ChooseDialog import *
+from MainWindow import *
+from ResultDialog import *
 
 
-class childWindow(QDialog):
-    def __init__(self):
-        QDialog.__init__(self)
-        self.child = Ui_Dialog()
-        self.child.setupUi(self)
-        # self.child.restart.clicked.connect(self.returnMain())
+class Controller:
+    def __init__(self, db):
+        self.db = db
+        self.main_window = MainWindow()
+        self.choose_dialog = ChooseDialog(db)
+        self.result_dialog = ResultDialog(db)
 
-    # def returnMain(self):
-    #     self.hide()
-    #     self.mainwindow = Ui_MainWindow()
-    #     self.mainwindow.show()
+    def show_main_window(self):
+        # self.main_window.switch_window.connect(self.show_choose_dialog)
+        self.main_window.main_ui.nextbtn.clicked.connect(self.show_choose_dialog)
+        self.main_window.show()
 
+    def show_choose_dialog(self):
+        self.main_window.close()
+        self.choose_dialog.child.restart.clicked.connect(self.choose_dialog_return)
+        self.choose_dialog.child.next.clicked.connect(self.show_result_dialog)
+        self.choose_dialog.show()
+
+    def choose_dialog_return(self):
+        self.choose_dialog.close()
+        self.show_main_window()
+
+    def show_result_dialog(self):
+        self.choose_dialog.close()
+        self.result_dialog.child.reselectPushButton.clicked.connect(self.result_dialog_return)
+        self.result_dialog.child.close.clicked.connect(self.result_dialog.close)
+        self.result_dialog.show()
+
+    def result_dialog_return(self):
+        self.result_dialog.close()
+        self.show_choose_dialog()
+
+
+def open_ui(db):
+    app = QtWidgets.QApplication(sys.argv)
+    controller = Controller(db)
+    controller.show_main_window()
+    sys.exit(app.exec_())
 
 
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    window = parentWindow()
-    child = childWindow()
-
-    # use button to connect
-    btn = window.main_ui.nextbtn
-    btn.clicked.connect(child.show)
-
-    # display
-    window.show()
-    sys.exit(app.exec_())
+    db = pymysql.connect("ece651db.cyepucyw4sld.us-east-2.rds.amazonaws.com", "hdong", "donghao0",
+                         "yelp")
+    open_ui(db)
+    db.close()

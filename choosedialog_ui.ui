@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Next</string>
+    <string>analyze</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -110,7 +110,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>7</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="business">
     <attribute name="title">
@@ -291,336 +291,6 @@
      </property>
     </widget>
    </widget>
-   <!-- <widget class="QWidget" name="checkin">
-    <attribute name="title">
-     <string>checkin</string>
-    </attribute>
-    <widget class="QCheckBox" name="checkin_1">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>161</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>business_id</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_2">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>171</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_0_1_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_3">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>50</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_1_2_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_4">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>70</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_2_3_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_5">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>90</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_3_4_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_6">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>110</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_4_5_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_7">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>130</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_5_6_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_8">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>150</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_6_7_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_9">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>170</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_7_8_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_10">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>190</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_8_9_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_11">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>210</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_9_10_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_12">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>230</y>
-       <width>191</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_10_11_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_13">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>250</y>
-       <width>191</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_11_12_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_14">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>270</y>
-       <width>231</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_12_13_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_15">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>290</y>
-       <width>221</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_13_14_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_16">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>310</y>
-       <width>191</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_14_15_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_17">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>330</y>
-       <width>221</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_15_16_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_18">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>350</y>
-       <width>221</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_16_17_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_19">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>370</y>
-       <width>221</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_17_18_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_20">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>390</y>
-       <width>221</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_18_19_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_21">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>410</y>
-       <width>221</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_19_20_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_22">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>430</y>
-       <width>221</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_20_21_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_23">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>450</y>
-       <width>221</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_21_22_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_24">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>470</y>
-       <width>221</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_22_23_count</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkin_25"> 
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>490</y>
-       <width>221</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>sunday_23_0_count</string>
-     </property>
-    </widget>
-   </widget>-->
    <widget class="QWidget" name="review">
     <attribute name="title">
      <string>review</string>
@@ -1109,7 +779,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="tab_8">
+   <!-- <widget class="QWidget" name="tab_8">
     <attribute name="title">
      <string>user_friends</string>
     </attribute>
@@ -1139,8 +809,8 @@
       <string>friend_id</string>
      </property>
     </widget>
-   </widget>
-  </widget>
+   </widget>-->
+  </widget> 
   <widget class="QPushButton" name="restart">
    <property name="geometry">
     <rect>

@@ -15,7 +15,7 @@ class Ui_Dialog(object):
     tip_checkboxes = []
     user_checkboxes = []
     user_elite_checkboxes = []
-    user_friends_checkboxes = []
+
 
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -217,15 +217,6 @@ class Ui_Dialog(object):
         self.user_elite_2.setGeometry(QtCore.QRect(10, 40, 87, 20))
         self.user_elite_2.setObjectName("user_elite_2")
         self.tabWidget.addTab(self.user_elite, "")
-        self.tab_8 = QtWidgets.QWidget()
-        self.tab_8.setObjectName("tab_8")
-        self.user_friends_1 = QtWidgets.QCheckBox(self.tab_8)
-        self.user_friends_1.setGeometry(QtCore.QRect(10, 10, 87, 20))
-        self.user_friends_1.setObjectName("user_friends_1")
-        self.user_friends_2 = QtWidgets.QCheckBox(self.tab_8)
-        self.user_friends_2.setGeometry(QtCore.QRect(10, 40, 87, 20))
-        self.user_friends_2.setObjectName("user_friends_2")
-        self.tabWidget.addTab(self.tab_8, "")
         self.restart = QtWidgets.QPushButton(Dialog)
         self.restart.setGeometry(QtCore.QRect(430, 650, 113, 32))
         self.restart.setObjectName("restart")
@@ -237,7 +228,7 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.next.setText(_translate("Dialog", "Next"))
+        self.next.setText(_translate("Dialog", "analyze"))
         self.label.setText(_translate("Dialog", "Choose column you think important"))
         self.label_2.setText(_translate("Dialog", "Do you want to clean data you choose?"))
         self.yes_clean.setText(_translate("Dialog", "Yes"))
@@ -353,11 +344,7 @@ class Ui_Dialog(object):
         self.user_elite_checkboxes.append(self.user_elite_1)
         self.user_elite_checkboxes.append(self.user_elite_2)
 
-        self.user_friends_1.setText(_translate("Dialog", "user_id"))
-        self.user_friends_2.setText(_translate("Dialog", "friend_id"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_8), _translate("Dialog", "user_friends"))
-        self.user_friends_checkboxes.append(self.user_friends_1)
-        self.user_friends_checkboxes.append(self.user_friends_2)
+
 
         self.restart.setText(_translate("Dialog", "restart"))
 

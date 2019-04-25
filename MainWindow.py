@@ -13,12 +13,11 @@ class MainWindow(QMainWindow):
         self.main_ui.setupUi(self)
         self.user = ""
         self.business = ""
-        self.main_ui.nextbtn.clicked.connect(self.data)
+        self.main_ui.nextbtn.clicked.connect(self.set_selected_user_business)
 
     # def next_clicked(self):
     #     self.switch_window.emit()
 
-    def data(self):
+    def set_selected_user_business(self):
         self.user = self.main_ui.user_box.toPlainText()
         self.business = self.main_ui.business_box.toPlainText()
-        return self.user, self.business
