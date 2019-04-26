@@ -11,9 +11,10 @@ We implement data study and analysis on Yelp dataset, including data trend prese
 - Data storage: AWS - Relational Database Service 
 
 ### Part 0.2 Run 
-After installing PyQt5 and pymysql, run drive.py in IDE or terminal. A window will be showed which is the application we implemented.
+After installing PyQt5 and pymysql, run *drive.py* in IDE or terminal. A window will be showed which is the application we implemented.
 
 ## Part 1. Data Cleaning
+See __dataclean.sql__
 #### Part 1.1 Sanity Checks
 ##### Part 1.1.1 Time Checks
 1. anything can not occur before yelp-founded time or from the future
@@ -31,27 +32,21 @@ After installing PyQt5 and pymysql, run drive.py in IDE or terminal. A window wi
 
 ## Part 2. Data Analysis
 
-### Part 2.1 User Ratings Prediction
+___User Ratings Prediction___
 _Predict what rating a user will give a business based on how s/he has rated other businesses and how others have rated that business?_
  
-#### Part 2.2.1 Client Side
-- select the user and business they want to predict
-- decide whether to clean data
-- select what attributes from the database they think import
-- decide whether to restart and change the attributes after being showed the result
+#### Part 2.1 Client Side
+- select the user and business they want to predict -- _MainWindow.py_
+- decide whether to clean data -- _ChooseDialog.py_
+- select what attributes from the database they think import  -- _ChooseDialog.py, choosedialog_ui.py_
+- decide whether to restart and change the attributes after being showed the result  --  _ChooseDialog.py, ResultDialog.py_
 
-#### Part 2.2.2 Server Side
-- connect to the database
-- implement the data-clean procedure based on the client choice
-- implement __Dicision Tree__ based on the attributes the client choose
+#### Part 2.2 Server Side
+- connect to the database -- _drive.py_
+- implement the data-clean procedure based on the client choice -- _ChooseDialog.py_
+- implement __Decision Tree Algorithm__ based on the attributes the client choose -- _decision_tree.py_
 
-#### Part 2.2.3 Application Demo
-
-### Part 2.2 Businesses' Ratings Trend
-_Based on the data, which businesses are declining and which are improving in their ratings?_
-
-### Part 2.3 Operation hours' affect
-_Do operation hours affect the rating of a business?_
-
-### Part 2.4 Review length's affect
-_Does review length affect how other users perceive a review?_
+#### Part 2.3 Application Demo
+ ![](./ui_pic/main_window.png)
+ ![](./ui_pic/choose_features.png)
+ ![](./ui_pic/result_dialog.png)
