@@ -45,8 +45,11 @@ _Predict what rating a user will give a business based on how s/he has rated oth
 - connect to the database -- _drive.py_
 - implement the data-clean procedure based on the client choice -- _ChooseDialog.py_
 - implement __Decision Tree Algorithm__ based on the attributes the client choose -- _decision_tree.py_
+![](./ui_pic/tree.png)
+- implement the prediction based on the decision tree built
 
 #### Part 2.3 Application Demo
  ![](./ui_pic/main_window.png)
  ![](./ui_pic/choose_features.png)
  ![](./ui_pic/result_dialog.png)
+ 
