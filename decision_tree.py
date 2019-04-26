@@ -1,7 +1,3 @@
-# @Time    : 2017/12/26 19:15
-# @Author  : Leafage
-# @File    : seriesTree.py
-# @Software: PyCharm
 import collections
 from math import log
 import operator
@@ -267,7 +263,7 @@ def majorityCnt(classList):
 
 
 def createTree(mydataSet, mylabels):
-    dataSet = mydataSet
+    dataSet =  copy.deepcopy(mydataSet)
     """
     创建决策树
     :param dataSet: 数据集

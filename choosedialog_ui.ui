@@ -16,7 +16,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>180</x>
      <y>30</y>
      <width>321</width>
      <height>51</height>
@@ -30,43 +30,8 @@
     </font>
    </property>
    <property name="text">
-    <string>The features important for prediction</string>
+    <string>features important for prediction</string>
    </property>
-  </widget>
-  <widget class="QListWidget" name="listWidget">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>90</y>
-     <width>211</width>
-     <height>131</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>businees.stars</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>business.review_count</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>user.average_stars</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>user.review_count</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>user.fans</string>
-    </property>
-   </item>
   </widget>
   <widget class="QRadioButton" name="no_clean">
    <property name="geometry">
@@ -121,6 +86,9 @@
    <property name="text">
     <string>Yes</string>
    </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QPushButton" name="restart">
    <property name="geometry">
@@ -146,6 +114,83 @@
    </property>
    <property name="text">
     <string>analyze</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="b_average_stars">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>100</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>businees.stars</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="b_review_count">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>130</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>business.review_count</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="u_average_stars">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>160</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>user.average_stars</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="u_review_count">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>190</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>user.review_count</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="u_fans">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>220</y>
+     <width>87</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>user.fans</string>
    </property>
   </widget>
  </widget>
