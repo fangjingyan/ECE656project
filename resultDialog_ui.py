@@ -11,15 +11,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(718, 701)
-        self.selectedAttributes = QtWidgets.QListWidget(Dialog)
-        self.selectedAttributes.setGeometry(QtCore.QRect(40, 80, 311, 531))
-        self.selectedAttributes.setObjectName("selectedAttributes")
+        Dialog.resize(604, 430)
         self.reselectPushButton = QtWidgets.QPushButton(Dialog)
-        self.reselectPushButton.setGeometry(QtCore.QRect(450, 640, 113, 32))
+        self.reselectPushButton.setGeometry(QtCore.QRect(160, 180, 113, 32))
         self.reselectPushButton.setObjectName("reselectPushButton")
         self.close = QtWidgets.QPushButton(Dialog)
-        self.close.setGeometry(QtCore.QRect(580, 640, 113, 32))
+        self.close.setGeometry(QtCore.QRect(290, 180, 113, 32))
         self.close.setObjectName("close")
 
         self.retranslateUi(Dialog)

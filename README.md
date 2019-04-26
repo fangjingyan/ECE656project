@@ -25,7 +25,7 @@ After installing PyQt5 and pymysql, run drive.py in IDE or terminal. A window wi
 1. id check, id cannot be null in all tables
 2. user's review_count should not be less than those review sum in the review table, which means this user's data in the user table is outdated
 
-#### Part 1.2 Representative Limit
+#### Part 1.2 Representative Limit (optional)
 1. filter users whose review_count < a threshold out
 2. filter users whose average ratings = 5 or 1
 

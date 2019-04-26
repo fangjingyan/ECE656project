@@ -48,7 +48,8 @@ def open_ui(db):
 
 
 if __name__ == '__main__':
-    db = pymysql.connect("ece651db.cyepucyw4sld.us-east-2.rds.amazonaws.com", "hdong", "donghao0",
-                         "yelp")
+    # db = pymysql.connect("ece651db.cyepucyw4sld.us-east-2.rds.amazonaws.com", "hdong", "donghao0",
+    #     #                      "yelp")
+    db = pymysql.connect("localhost","hdong","dddd","Yelp")
     open_ui(db)
     db.close()
