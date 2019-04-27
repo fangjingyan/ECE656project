@@ -1,6 +1,11 @@
 # ECE656project
 
+__Name : Hao Dong    StudentID : 20757585  WatID : h45dong__
+
+__Name : Jingyan Fang    StudentID : 20759260  WatID:  j46fang__
+
 ## Introduction
+
 We implement data study and analysis on Yelp dataset, including data trend presentation and data prediction, which is the most import part of our project. For the prediction, the system has a client/server application, which allows client to choose what they think important and reasonable to make server implement data-clean and data-mining (decision-tree classifier).
 
 ## Part 0. Code Environment and How to Run
@@ -34,7 +39,7 @@ See __dataclean.sql__
 
 ___User Ratings Prediction___
 _Predict what rating a user will give a business based on how s/he has rated other businesses and how others have rated that business?_
- 
+
 #### Part 2.1 Client Side
 - select the user and business they want to predict -- _MainWindow.py_
 - decide whether to clean data -- _ChooseDialog.py_
@@ -52,4 +57,4 @@ _Predict what rating a user will give a business based on how s/he has rated oth
  ![](./ui_pic/main_window.png)
  ![](./ui_pic/choose_features.png)
  ![](./ui_pic/result_dialog.png)
- 
+
